@@ -12,9 +12,19 @@ public class TextEditorEditor : Editor
         DrawDefaultInspector();
         TextEditor editor = target as TextEditor;
 
-        if (GUILayout.Button("Create New Line Object"))
+        if (GUILayout.Button("Set Default Values"))
+        {
+            editor.SetDefaultValues();
+        }
+        else if (GUILayout.Button("Adjust to new width to height ratio"))
+        {
+            editor.SetToNewWidthToHeightRatio();
+        }
+        else if (GUILayout.Button("Create New Line Object"))
         {
             editor.CreateTextLineObject();
         }
+
+        
     }
 }
