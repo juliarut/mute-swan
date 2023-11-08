@@ -24,6 +24,18 @@ public class TextEditorEditor : Editor
         {
             editor.CreateTextLineObject();
         }
+        else if (GUILayout.Button("Clear char list"))
+        {
+            editor.ClearCharList();
+        }
+        else if (GUILayout.Button("Clear entries"))
+        {
+            editor.ClearEntries();
+        }
+        else if (GUILayout.Button("Clear Text Boxes"))
+        {
+            editor.ClearTextBoxes();
+        }
 
         
     }

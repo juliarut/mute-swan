@@ -1,8 +1,10 @@
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using Unity.XR.CoreUtils;
 using UnityEngine;
-
+using UnityEngine.UI;
+using TMPro;
 public class TextEditor : MonoBehaviour
 {
     [Range(0.1f, 1f), SerializeField] private float widthToHeightRatio;
@@ -15,6 +17,9 @@ public class TextEditor : MonoBehaviour
     [SerializeField] private float charSpacing;
     [SerializeField] private Color fontColor;
 
+    private List<char> charList;
+    private TextInfo textInfo;
+
     [SerializeField] private string title;
     [Multiline, SerializeField] private string lyricText;
 
@@ -23,13 +28,13 @@ public class TextEditor : MonoBehaviour
     public void SetDefaultValues()
     {
         widthToHeightRatio = 0.5f;
-        UpperCaseHeight = 0.1f;
+        UpperCaseHeight = 0.5f;
         UpperCaseWidth = UpperCaseHeight * widthToHeightRatio;
-        lowerCaseHeight = 0.07f;
+        lowerCaseHeight = 0.35f;
         lowerCaseWidth = lowerCaseHeight * widthToHeightRatio;
-        spaceWidth = 0.5f;
+        spaceWidth = 0.06f;
         depth = 0.02f;
-        charSpacing = 0.01f;
+        charSpacing = 0.05f;
         fontColor = Color.yellow;
     }
 
@@ -41,37 +46,90 @@ public class TextEditor : MonoBehaviour
 
     public void CreateTextLineObject()
     {
+        textInfo = gameObject.GetComponent<TextInfo>();
+        List<char> tempCharList = new List<char>();
         startPos = transform.position;
         GameObject newLineParent = new GameObject();
+        newLineParent.AddComponent<TextInfo>();
+        newLineParent.transform.position = startPos;
         newLineParent.name = title;
         newLineParent.transform.parent = transform;
         float totalWidth = 0;
 
         foreach(char c in lyricText)
         {
+            float rectTransformOffset = 0.005f;
             if (char.IsUpper(c))
             {
                 GameObject newCube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                newCube.transform.position = startPos;
                 newCube.transform.localScale = new Vector3(UpperCaseWidth, UpperCaseHeight, depth);
                 newCube.transform.parent = newLineParent.transform;
                 newCube.name = c.ToString();
                 newCube.GetComponent<MeshRenderer>().sharedMaterial.color = fontColor;
+                GameObject letterCanvas = new GameObject("Canvas");
+                letterCanvas.transform.position = startPos;
+                letterCanvas.transform.parent = newCube.transform;
+                Canvas newCanvas = letterCanvas.AddComponent<Canvas>();
+                RectTransform rectTransform = newCanvas.GetComponent<RectTransform>();
+                rectTransform.sizeDelta = new Vector2(newCube.transform.localScale.x, newCube.transform.localScale.y);
+                rectTransform.position -= new Vector3(0f, 0f, (depth / 2) + rectTransformOffset);
+                newCanvas.renderMode = RenderMode.WorldSpace;
+                GameObject tmpUgui = new GameObject("Text (TMP)");
+                tmpUgui.transform.position = transform.position;
+                tmpUgui.transform.parent = newCanvas.transform;
+                tmpUgui.AddComponent<TextMeshProUGUI>();
+                RectTransform tmpRectTransfrom = tmpUgui.GetComponent<RectTransform>();
+                tmpRectTransfrom.sizeDelta = new Vector2(newCube.transform.localScale.x, newCube.transform.localScale.y);
+                tmpRectTransfrom.position -= new Vector3(0f, 0f, (depth / 2) + rectTransformOffset);
                 totalWidth += newCube.transform.localScale.x;
             }
             else if (char.IsLower(c))
             {
                 GameObject newCube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                newCube.transform.position = startPos;
                 newCube.transform.localScale = new Vector3(lowerCaseWidth, lowerCaseHeight, depth);
                 newCube.transform.parent = newLineParent.transform;
                 newCube.name = c.ToString();
                 newCube.GetComponent<MeshRenderer>().sharedMaterial.color = fontColor;
                 totalWidth += newCube.transform.localScale.x;
-            } else if (char.IsSeparator(' ')) 
+            } 
+            else if (char.IsSeparator(' ')) 
             {
+                GameObject emptySpaceObject = new GameObject("space");
+                emptySpaceObject.transform.position = startPos;
+                emptySpaceObject.transform.localScale = new Vector3(spaceWidth, UpperCaseHeight, depth);
+                emptySpaceObject.transform.parent = newLineParent.transform;
                 totalWidth += spaceWidth;
             }
+
+            if (charList.IndexOf(c) == -1 && char.IsLetterOrDigit(c))
+            {
+                charList.Add(c);
+            }
+
+            if (tempCharList.IndexOf(c) == -1 && char.IsLetterOrDigit(c))
+            {
+                tempCharList.Add(c);
+            }
         }
+
+        int countofChars = 0;
+
+        foreach (char ch in lyricText)
+        {
+            if (char.IsLetterOrDigit(ch))
+            {
+                countofChars++;
+            }
+        }
+
+        totalWidth += ((countofChars - 1) * charSpacing);
         PositionCube(totalWidth, newLineParent, lyricText);
+        charList.Sort();
+        textInfo.UpdateCharList(charList);
+        tempCharList.Sort();
+        newLineParent.GetComponent<TextInfo>().UpdateCharList(tempCharList);
     }
 
     private void PositionCube(float totalWidth, GameObject newLineParent, string lyricText)
@@ -84,10 +142,24 @@ public class TextEditor : MonoBehaviour
 
         for (int i = 0; i < lyricText.Length; i++)
         {
+            float currentObjectWidth = 0;
+            float currentObjectHeight = 0;
+
             if (i == 0)
             {
                 currentObject = newLineParent.transform.GetChild(i).gameObject;
-                currentObject.transform.position += new Vector3(transform.position.x - (totalWidth / 2f), 0f, 0f);
+                currentObjectWidth = currentObject.transform.localScale.x;
+                currentObjectHeight = currentObject.transform.localScale.y;
+
+                if (currentObjectHeight == UpperCaseHeight)
+                {
+                    currentObject.transform.position -= new Vector3((totalWidth / 2f) - (currentObjectWidth / 2), 0f, 0f);
+                }
+                else
+                {
+                    currentObject.transform.position -= new Vector3((totalWidth / 2f) - (currentObjectWidth / 2), (UpperCaseHeight - currentObjectHeight) / 2, 0f);
+                }
+                
             }
             else
             {
@@ -95,19 +167,53 @@ public class TextEditor : MonoBehaviour
                 previousObject = newLineParent.transform.GetChild(i - 1).gameObject;
                 float previousObjectWidth = previousObject.transform.localScale.x;
                 float previousObjectHeight = previousObject.transform.localScale.y;
-                float currentObjectWidth = currentObject.transform.localScale.x;
-                float currentObjectHeight = currentObject.transform.localScale.y;
+                currentObjectWidth = currentObject.transform.localScale.x;
+                currentObjectHeight = currentObject.transform.localScale.y;
 
-                currentObject.transform.position = new Vector3(previousObject.transform.position.x + (previousObjectWidth / 2) + charSpacing + (currentObjectWidth / 2), 0f, 0f);
+                currentObject.transform.position += new Vector3(previousObject.transform.position.x + (previousObjectWidth / 2) + charSpacing + (currentObjectWidth / 2), 0f, 0f);
 
                 if (currentObjectHeight < previousObjectHeight)
                 {
-                    currentObject.transform.position = new Vector3(currentObject.transform.position.x, currentObject.transform.position.y - ((previousObjectHeight - currentObjectHeight) / 2f), 0f);
-                } else if (currentObjectWidth == previousObjectWidth)
+                    currentObject.transform.position = new Vector3(currentObject.transform.position.x, currentObject.transform.position.y - ((previousObjectHeight - currentObjectHeight) / 2f), currentObject.transform.position.z);
+                }
+                else if (currentObjectWidth == previousObjectWidth)
                 {
-                    currentObject.transform.position = new Vector3(currentObject.transform.position.x, previousObject.transform.position.y, 0f);
+                    currentObject.transform.position = new Vector3(currentObject.transform.position.x, previousObject.transform.position.y, currentObject.transform.position.z);
                 }
             }
         }
     }
+
+    public void ClearCharList()
+    {
+        charList.Clear();
+    }
+
+    public void ClearEntries()
+    {
+        foreach (Transform transform in gameObject.transform)
+        {
+            if (transform.gameObject.name != "Cursor")
+            {
+                DestroyImmediate(transform.gameObject);
+            }
+        }
+
+        foreach (Transform transform in gameObject.transform)
+        {
+            if (transform.gameObject.name != "Cursor")
+            {
+                DestroyImmediate(transform.gameObject);
+            }
+        }
+
+        GetComponent<TextInfo>().ClearCharList();
+    }
+
+    public void ClearTextBoxes()
+    {
+        title = "";
+        lyricText = "";
+    }
+
 }
