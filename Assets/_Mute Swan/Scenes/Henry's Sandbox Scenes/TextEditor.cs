@@ -58,7 +58,7 @@ public class TextEditor : MonoBehaviour
 
         foreach(char c in lyricText)
         {
-            float rectTransformOffset = 0.005f;
+            float rectTransformZOffset = 0.005f;
             if (char.IsUpper(c))
             {
                 GameObject newCube = GameObject.CreatePrimitive(PrimitiveType.Cube);
@@ -67,21 +67,15 @@ public class TextEditor : MonoBehaviour
                 newCube.transform.parent = newLineParent.transform;
                 newCube.name = c.ToString();
                 newCube.GetComponent<MeshRenderer>().sharedMaterial.color = fontColor;
-                GameObject letterCanvas = new GameObject("Canvas");
-                letterCanvas.transform.position = startPos;
-                letterCanvas.transform.parent = newCube.transform;
-                Canvas newCanvas = letterCanvas.AddComponent<Canvas>();
-                RectTransform rectTransform = newCanvas.GetComponent<RectTransform>();
-                rectTransform.sizeDelta = new Vector2(newCube.transform.localScale.x, newCube.transform.localScale.y);
-                rectTransform.position -= new Vector3(0f, 0f, (depth / 2) + rectTransformOffset);
-                newCanvas.renderMode = RenderMode.WorldSpace;
+                Canvas newCanvas = AddCanvas(rectTransformZOffset, newCube);
                 GameObject tmpUgui = new GameObject("Text (TMP)");
                 tmpUgui.transform.position = transform.position;
                 tmpUgui.transform.parent = newCanvas.transform;
                 tmpUgui.AddComponent<TextMeshProUGUI>();
                 RectTransform tmpRectTransfrom = tmpUgui.GetComponent<RectTransform>();
-                tmpRectTransfrom.sizeDelta = new Vector2(newCube.transform.localScale.x, newCube.transform.localScale.y);
-                tmpRectTransfrom.position -= new Vector3(0f, 0f, (depth / 2) + rectTransformOffset);
+                tmpRectTransfrom.sizeDelta = new Vector2(1, 1);
+                tmpRectTransfrom.localScale = new Vector3(1f, 1f, 1f);
+                tmpRectTransfrom.position -= new Vector3(0f, 0f, (depth / 2) + rectTransformZOffset);
                 totalWidth += newCube.transform.localScale.x;
             }
             else if (char.IsLower(c))
@@ -130,6 +124,20 @@ public class TextEditor : MonoBehaviour
         textInfo.UpdateCharList(charList);
         tempCharList.Sort();
         newLineParent.GetComponent<TextInfo>().UpdateCharList(tempCharList);
+    }
+
+    private Canvas AddCanvas(float rectTransformOffset, GameObject newCube)
+    {
+        GameObject letterCanvas = new GameObject("Canvas");
+        letterCanvas.transform.position = startPos;
+        letterCanvas.transform.parent = newCube.transform;
+        Canvas newCanvas = letterCanvas.AddComponent<Canvas>();
+        RectTransform rectTransform = newCanvas.GetComponent<RectTransform>();
+        rectTransform.sizeDelta = new Vector2(1f, 1f);
+        rectTransform.localScale = new Vector3(1f, 1f, 1f);
+        rectTransform.position -= new Vector3(0f, 0f, (depth / 2) + rectTransformOffset);
+        newCanvas.renderMode = RenderMode.WorldSpace;
+        return newCanvas;
     }
 
     private void PositionCube(float totalWidth, GameObject newLineParent, string lyricText)
