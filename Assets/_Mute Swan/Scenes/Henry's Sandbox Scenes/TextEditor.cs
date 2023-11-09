@@ -27,10 +27,10 @@ public class TextEditor : MonoBehaviour
 
     public void SetDefaultValues()
     {
-        widthToHeightRatio = 0.5f;
+        widthToHeightRatio = 0.95f;
         UpperCaseHeight = 0.5f;
         UpperCaseWidth = UpperCaseHeight * widthToHeightRatio;
-        lowerCaseHeight = 0.35f;
+        lowerCaseHeight = 0.4f;
         lowerCaseWidth = lowerCaseHeight * widthToHeightRatio;
         spaceWidth = 0.06f;
         depth = 0.02f;
@@ -46,6 +46,13 @@ public class TextEditor : MonoBehaviour
 
     public void CreateTextLineObject()
     {
+        GameObject newText = new();
+        TextMeshPro textMesh = newText.AddComponent<TextMeshPro>();
+        RectTransform textRectTransform = newText.GetComponent<RectTransform>();
+        textRectTransform.localPosition = startPos;
+        textMesh.text = lyricText;
+
+        //textMeshPro.rectTransform.position = startPos;
         textInfo = gameObject.GetComponent<TextInfo>();
         List<char> tempCharList = new List<char>();
         startPos = transform.position;
@@ -59,6 +66,7 @@ public class TextEditor : MonoBehaviour
         foreach(char c in lyricText)
         {
             float rectTransformZOffset = 0.005f;
+
             if (char.IsUpper(c))
             {
                 GameObject newCube = GameObject.CreatePrimitive(PrimitiveType.Cube);
@@ -76,6 +84,10 @@ public class TextEditor : MonoBehaviour
                 tmpRectTransfrom.sizeDelta = new Vector2(1, 1);
                 tmpRectTransfrom.localScale = new Vector3(1f, 1f, 1f);
                 tmpRectTransfrom.position -= new Vector3(0f, 0f, (depth / 2) + rectTransformZOffset);
+                tmpRectTransfrom.anchorMin = new Vector2(0f, 0f);
+                tmpRectTransfrom.anchorMax = new Vector2(1f, 1f);
+                tmpRectTransfrom.offsetMax = new Vector2(0f, 0f);
+                tmpRectTransfrom.offsetMin = new Vector2(0f, 0f);
                 totalWidth += newCube.transform.localScale.x;
             }
             else if (char.IsLower(c))
