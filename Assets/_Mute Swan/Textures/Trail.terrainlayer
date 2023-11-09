@@ -6,9 +6,9 @@ TerrainLayer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: NewLayer
-  m_DiffuseTexture: {fileID: 2800000, guid: fb33c7bb0a9023744b53c38f87273977, type: 3}
-  m_NormalMapTexture: {fileID: 2800000, guid: c75492b8e7df8144790abbc17131e4f3, type: 3}
+  m_Name: Trail
+  m_DiffuseTexture: {fileID: 2800000, guid: 3218dae5b55e449428bbe54539d77e40, type: 3}
+  m_NormalMapTexture: {fileID: 2800000, guid: ff2a9472e90a4934fb9523977e311587, type: 3}
   m_MaskMapTexture: {fileID: 0}
   m_TileSize: {x: 50, y: 50}
   m_TileOffset: {x: 0, y: 0}
