@@ -38,6 +38,7 @@ public class TextEditor : MonoBehaviour
             textSizeFitter.horizontalFit = ContentSizeFitter.FitMode.PreferredSize;
             textSizeFitter.verticalFit = ContentSizeFitter.FitMode.PreferredSize;
             TMP_TextInfo tmp_textInfo = textMeshPro.textInfo;
+            newText.SetActive(false);
         }
 
         //foreach(char c in lyricText)
@@ -66,6 +67,7 @@ public class TextEditor : MonoBehaviour
 
     public void ClearEntries()
     {
+
 
         //for (int i = gameObject.transform.childCount - 1; i <= 0; i--)
         //{
