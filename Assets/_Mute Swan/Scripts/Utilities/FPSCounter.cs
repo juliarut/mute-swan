@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 namespace Utilities
 {
@@ -15,16 +16,19 @@ namespace Utilities
         private float repeatRate = 0.25f;
         private GameObject cameraRef;
         [SerializeField] private Vector3 offset;
+        ContentSizeFitter contentSizeFitter;
 
         // Start is called before the first frame update
         void Start()
         {
             cameraRef = GameObject.Find("Main Camera");
+            transform.position = cameraRef.transform.position + offset;
             textMeshPro = GetComponent<TextMeshPro>();
-            textMeshPro.alignment = TextAlignmentOptions.Center;
-            textMeshPro.horizontalAlignment = HorizontalAlignmentOptions.Center;
-            textMeshPro.verticalAlignment = VerticalAlignmentOptions.Middle;
+            textMeshPro.alignment = TextAlignmentOptions.TopLeft;
             textMeshPro.fontSize = 28;
+            contentSizeFitter = GetComponent<ContentSizeFitter>();
+            contentSizeFitter.horizontalFit = ContentSizeFitter.FitMode.PreferredSize;
+            contentSizeFitter.verticalFit = ContentSizeFitter.FitMode.PreferredSize;
             fpsText = "";
             InvokeRepeating(nameof(UpdateFPS), repeatRate, repeatRate);
         }
@@ -36,7 +40,6 @@ namespace Utilities
             float msec = deltaTime * 1000f;
             fpsValue = 1.0f / deltaTime;
             fpsText = string.Format("FPS: {0:0} ({1:0.0} ms)", Mathf.RoundToInt(fpsValue), msec);
-            transform.position = cameraRef.transform.position + offset;
         }
 
         private void UpdateFPS()
