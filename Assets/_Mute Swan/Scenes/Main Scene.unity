@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.28124416, g: 0.30772036, b: 0.36573425, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -965,6 +965,18 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &59431871 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6591044974436508684, guid: 96090010966ed7d458754467ac28af4d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2947918179505963574}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &59431872 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 184580512, guid: 96090010966ed7d458754467ac28af4d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2947918179505963574}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &78849609
 Mesh:
   m_ObjectHideFlags: 0
@@ -1221,6 +1233,16 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: -5602731781173226713, guid: 6a96cf78603bd5a4d8e211531617a998, type: 2}
     value: {fileID: 0}
+  - key: {fileID: -7961998423999163320, guid: 6a96cf78603bd5a4d8e211531617a998, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -6210247118199765350, guid: 6a96cf78603bd5a4d8e211531617a998, type: 2}
+    value: {fileID: 59431871}
+  - key: {fileID: 911304451988951083, guid: 6a96cf78603bd5a4d8e211531617a998, type: 2}
+    value: {fileID: 59431872}
+  - key: {fileID: -2011373534604778497, guid: 6a96cf78603bd5a4d8e211531617a998, type: 2}
+    value: {fileID: 116376273}
+  - key: {fileID: -1065433367578120355, guid: 6a96cf78603bd5a4d8e211531617a998, type: 2}
+    value: {fileID: 1392185897}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &87863843
@@ -2274,6 +2296,12 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!95 &116376273 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1870465375771212625, guid: 96090010966ed7d458754467ac28af4d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2947918179505963574}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &127488594
 Mesh:
   m_ObjectHideFlags: 0
@@ -20876,6 +20904,12 @@ LightingSettings:
   m_PVRFilteringAtrousPositionSigmaIndirect: 2
   m_PVRFilteringAtrousPositionSigmaAO: 1
   m_PVRTiledBaking: 0
+--- !u!95 &1392185897 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1667242894905184035, guid: 1ef27aa1e36a7564c8b3ba0aa5b23818,
+    type: 3}
+  m_PrefabInstance: {fileID: 1151253763}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1402456690
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28137,6 +28171,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 184580512, guid: 96090010966ed7d458754467ac28af4d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7215882853699124, guid: 96090010966ed7d458754467ac28af4d, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -28208,6 +28246,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Boat_Grey_Animated
+      objectReference: {fileID: 0}
+    - target: {fileID: 6591044974436508684, guid: 96090010966ed7d458754467ac28af4d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96090010966ed7d458754467ac28af4d, type: 3}
