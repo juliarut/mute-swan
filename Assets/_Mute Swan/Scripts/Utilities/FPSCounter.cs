@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace Utilities
 {
-    [RequireComponent(typeof(TextMeshPro))]
+    [RequireComponent(typeof(TextMeshPro), typeof(ContentSizeFitter))]
     public class FPSCounter : MonoBehaviour
     {
         private string fpsText;

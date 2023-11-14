@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7685466998075390312}
   - component: {fileID: 7685466998075390315}
   - component: {fileID: 7685466998075390314}
+  - component: {fileID: 8139486321840633222}
   m_Layer: 0
   m_Name: FPS Counter
   m_TagString: Untagged
@@ -36,8 +37,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 8}
-  m_SizeDelta: {x: 20, y: 5}
+  m_AnchoredPosition: {x: 11, y: 4}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &7685466998075390312
 MeshRenderer:
@@ -185,4 +186,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fcd659db671a89428a84a0b6786d43f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: {x: 0, y: 8, z: 20}
+  offset: {x: 11, y: 4, z: 20}
+--- !u!114 &8139486321840633222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7685466998075390317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 2
+  m_VerticalFit: 2
