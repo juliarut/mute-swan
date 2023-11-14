@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.28126618, g: 0.30827802, b: 0.36627477, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -956,6 +956,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558493556776617247, guid: 45f0f2316e49e8a408bca6c4b55b9d4d,
+        type: 3}
+      propertyPath: m_TreeDistance
+      value: 770
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558493556776617247, guid: 45f0f2316e49e8a408bca6c4b55b9d4d,
+        type: 3}
+      propertyPath: m_DetailObjectDensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558493556776617247, guid: 45f0f2316e49e8a408bca6c4b55b9d4d,
+        type: 3}
+      propertyPath: m_TreeCrossFadeLength
+      value: 37.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558493556776617247, guid: 45f0f2316e49e8a408bca6c4b55b9d4d,
+        type: 3}
+      propertyPath: m_DetailObjectDistance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558493556776617247, guid: 45f0f2316e49e8a408bca6c4b55b9d4d,
+        type: 3}
+      propertyPath: m_TreeBillboardDistance
+      value: 340
+      objectReference: {fileID: 0}
+    - target: {fileID: 4558493556776617247, guid: 45f0f2316e49e8a408bca6c4b55b9d4d,
+        type: 3}
+      propertyPath: m_TreeMaximumFullLODCount
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45f0f2316e49e8a408bca6c4b55b9d4d, type: 3}
