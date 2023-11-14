@@ -1279,6 +1279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b471b8cd10efc58479fe967e4471a4f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  director: {fileID: 0}
 --- !u!43 &89916301
 Mesh:
   m_ObjectHideFlags: 0
@@ -27074,7 +27075,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 87863844}
+      objectReference: {fileID: 87863842}
     - target: {fileID: 4340273507485574703, guid: 3ba344640f9e83d42ac2af41f09d6ba5,
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -27093,7 +27094,7 @@ PrefabInstance:
     - target: {fileID: 4340273507485574703, guid: 3ba344640f9e83d42ac2af41f09d6ba5,
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StartTimeLine
+      value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 4340273507485574703, guid: 3ba344640f9e83d42ac2af41f09d6ba5,
         type: 3}
@@ -27103,7 +27104,7 @@ PrefabInstance:
     - target: {fileID: 4340273507485574703, guid: 3ba344640f9e83d42ac2af41f09d6ba5,
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: TimelinePlayer, Assembly-CSharp
+      value: UnityEngine.Playables.PlayableDirector, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4340273507485574703, guid: 3ba344640f9e83d42ac2af41f09d6ba5,
         type: 3}
