@@ -1,29 +1,50 @@
 using System.Collections;
 using UnityEngine;
-using TMPro; // Import TextMeshPro
+using TMPro;
 
 public class TypingEffect : MonoBehaviour
 {
-    private TMP_Text textMeshPro; // Reference to the TextMeshPro component
-    public float typingSpeed = 0.1f; // Speed of typing in seconds
+    private TMP_Text textMeshPro;
+    public float totalTypingTime = 5f; // Total tid för typning i sekunder
 
-    private string fullText; // The complete text to be typed
+    private string fullText;
 
     private void Start()
     {
-        textMeshPro = GetComponent<TextMeshPro>();
-        fullText = textMeshPro.text; // Store the full text
-        textMeshPro.text = string.Empty; // Clear the text
-        StartCoroutine(TypeText()); // Start typing animation
+        // Hämta referensen till TextMeshPro-komponenten på detta objekt
+        textMeshPro = GetComponent<TMP_Text>();
+
+        // Spara den ursprungliga texten för senare användning
+        fullText = textMeshPro.text;
+
+        // Rensa texten för att förbereda för typning
+        textMeshPro.text = string.Empty;
+
+        // Beräkna typningshastigheten baserat på den totala tiden och antalet bokstäver
+        float typingSpeed = CalculateTypingSpeed(totalTypingTime, fullText.Length);
+
+        // Starta typningseffekten
+        StartCoroutine(TypeText(typingSpeed));
     }
 
-    // Coroutine to simulate typing effect
-    IEnumerator TypeText()
+    // Metod för att beräkna typningshastigheten baserat på den totala tiden och antalet bokstäver
+    private float CalculateTypingSpeed(float totalTypingTime, int totalLetters)
     {
+        // Beräkna typningshastigheten baserat på formeln
+        return totalTypingTime / totalLetters;
+    }
+
+    // Coroutine för att simulera typningseffekten
+    IEnumerator TypeText(float typingSpeed)
+    {
+        // Iterera genom varje bokstav i texten
         foreach (char letter in fullText)
         {
-            textMeshPro.text += letter; // Append each letter to the text
-            yield return new WaitForSeconds(typingSpeed); // Wait for the specified duration
+            // Lägg till varje bokstav till texten
+            textMeshPro.text += letter;
+
+            // Vänta den specificerade tiden innan nästa bokstav
+            yield return new WaitForSeconds(typingSpeed);
         }
     }
 }
