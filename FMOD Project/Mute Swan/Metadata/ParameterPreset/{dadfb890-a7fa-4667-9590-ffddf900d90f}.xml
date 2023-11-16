@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{dadfb890-a7fa-4667-9590-ffddf900d90f}">
+		<property name="name">
+			<value>AmbVolume</value>
+		</property>
+		<relationship name="folder">
+			<destination>{d3705aef-4a2f-4cb9-92e2-8dcd5c90604e}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{a5702344-de8c-42db-91e2-6698a8ad5875}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{a5702344-de8c-42db-91e2-6698a8ad5875}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

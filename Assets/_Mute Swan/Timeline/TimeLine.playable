@@ -443,7 +443,7 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: Event
+    m_DisplayName: Music
   m_Markers:
     m_Objects: []
   template:
@@ -496,7 +496,7 @@ MonoBehaviour:
       Data2: 1126153169
       Data3: -728116322
       Data4: 1648382164
-    Path: event:/Event
+    Path: event:/Music
   StopType: 0
   Parameters: []
 --- !u!114 &-3509415392822918269
