@@ -771,8 +771,8 @@ MonoBehaviour:
   - m_Version: 1
     m_Start: 173.88333333333333
     m_ClipIn: 0
-    m_Asset: {fileID: 7304378108947494988}
-    m_Duration: 12.116666666666674
+    m_Asset: {fileID: 2888870128988351198}
+    m_Duration: 18.038385063006245
     m_TimeScale: 1
     m_ParentTrack: {fileID: -1065433367578120355}
     m_EaseInDuration: 0
@@ -3318,6 +3318,28 @@ MonoBehaviour:
     m_DisplayName: Image
   m_Markers:
     m_Objects: []
+--- !u!114 &2888870128988351198
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 030f85c3f73729f4f976f66ffb23b875, type: 3}
+  m_Name: AnimationPlayableAsset
+  m_EditorClassIdentifier: 
+  m_Clip: {fileID: 7400000, guid: 8b57a092ecdc5694a80f8fee6c4d988e, type: 2}
+  m_Position: {x: 0.009323147, y: -0.021060072, z: 0.006959401}
+  m_EulerAngles: {x: 90, y: 0, z: 0}
+  m_UseTrackMatchFields: 1
+  m_MatchTargetFields: 63
+  m_RemoveStartOffset: 1
+  m_ApplyFootIK: 1
+  m_Loop: 0
+  m_Version: 1
+  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!114 &3466086472194099607
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3624,28 +3646,6 @@ MonoBehaviour:
   searchHierarchy: 0
   active: 1
   postPlayback: 2
---- !u!114 &7304378108947494988
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 030f85c3f73729f4f976f66ffb23b875, type: 3}
-  m_Name: AnimationPlayableAsset
-  m_EditorClassIdentifier: 
-  m_Clip: {fileID: 7400000, guid: 8b57a092ecdc5694a80f8fee6c4d988e, type: 2}
-  m_Position: {x: 0.75, y: 0.687093, z: 2.2181911}
-  m_EulerAngles: {x: 0, y: 0, z: 0}
-  m_UseTrackMatchFields: 1
-  m_MatchTargetFields: 63
-  m_RemoveStartOffset: 0
-  m_ApplyFootIK: 1
-  m_Loop: 0
-  m_Version: 1
-  m_Rotation: {x: 0, y: 0, z: 0, w: 1}
 --- !u!114 &7589310934679381133
 MonoBehaviour:
   m_ObjectHideFlags: 1
