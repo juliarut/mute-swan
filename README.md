@@ -32,3 +32,7 @@ Known issues:
   3. Disable terrain (v.0.1.5) Result: + 16 FPS (Avg 72 FPS but with drops to abou 56)
   4. Use OpenGLES instead of Vulcan (v.0.1.6) Result: No significant change
   5. Go back to Vulcan, disable shadows on objects and bake light (v.0.1.7) Result: Solid AVG 72 FPS
+  6. Revert to previous settings (before unit tests), but bake lighting. New models in main scene. Result: 36 FPS
+  7. Disable timeline. Result: 48 FPS Avg.
+  8. Re-enable timeline, disable terrain. Result: close to 72 FPS Average.
+  9. Switch to Oculus inteagration. Result: more solid 72 FPS.
