@@ -212,7 +212,6 @@ GameObject:
   - component: {fileID: 280260657326161966}
   - component: {fileID: 280260657326161967}
   - component: {fileID: 280260657326161937}
-  - component: {fileID: 2049790438844976492}
   m_Layer: 0
   m_Name: TextEditor
   m_TagString: Untagged
@@ -278,7 +277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fontColor: {r: 1, g: 1, b: 1, a: 1}
-  fontSize: 4
+  fontSize: 5
   fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
 --- !u!114 &280260657326161937
 MonoBehaviour:
@@ -354,20 +353,6 @@ MonoBehaviour:
   - take me home
   - Let me fly on your wings
   - mute swan
---- !u!114 &2049790438844976492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 280260657326161964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5eb43b2f45523814290cac3c9202c0ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textMeshProTexts: []
-  fadeDuration: 1
 --- !u!1 &472983250108880030
 GameObject:
   m_ObjectHideFlags: 0
