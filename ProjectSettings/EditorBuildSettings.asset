@@ -7,7 +7,7 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/_Mute Swan/Scenes/Start Scene.unity
-    guid: 95e8dfe8162d1f3468218a409815b6eb
+    guid: 355b6f2ad9c8d3b4e834762fccad5da7
   - enabled: 1
     path: Assets/_Mute Swan/Scenes/Main Scene.unity
     guid: 5be62fc1cc5e0bb4ab2768088bfb9aa9
