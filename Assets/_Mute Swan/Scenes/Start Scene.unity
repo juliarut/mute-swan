@@ -1662,8 +1662,6 @@ PlayableDirector:
     value: {fileID: 566814984}
   - key: {fileID: 5119826334826979428, guid: 6a96cf78603bd5a4d8e211531617a998, type: 2}
     value: {fileID: 1494157554}
-  - key: {fileID: -473824835499802577, guid: 6a96cf78603bd5a4d8e211531617a998, type: 2}
-    value: {fileID: 1184505793}
   m_ExposedReferences:
     m_References:
     - 99ba7859d81277a4e93be522166c2b88: {fileID: 1998857684}
@@ -32787,21 +32785,6 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 1494157551}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1494157558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1494157553}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Events:
-    m_Signals: []
-    m_Events: []
 --- !u!1001 &1500340295
 PrefabInstance:
   m_ObjectHideFlags: 0
