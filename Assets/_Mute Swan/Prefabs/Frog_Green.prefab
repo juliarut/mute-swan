@@ -75,6 +75,7 @@ GameObject:
   - component: {fileID: 4217958490867861157}
   - component: {fileID: 5998941507279582132}
   - component: {fileID: 7929599971995452895}
+  - component: {fileID: 7537522847724379046}
   m_Layer: 0
   m_Name: Frog_Green
   m_TagString: Untagged
@@ -165,9 +166,21 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 9140987290952494478}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: JumpTrigger
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SceneHandler, Assembly-CSharp
-        m_MethodName: LoadNextScene
+        m_TargetAssemblyTypeName: UnityEngine.Playables.PlayableDirector, UnityEngine
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -230,7 +243,7 @@ MonoBehaviour:
       m_Calls: []
   m_AttachTransform: {fileID: 0}
   m_SecondaryAttachTransform: {fileID: 0}
-  m_UseDynamicAttach: 0
+  m_UseDynamicAttach: 1
   m_MatchAttachPosition: 1
   m_MatchAttachRotation: 1
   m_SnapToColliderVolume: 1
@@ -287,6 +300,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.1, y: 0.122772865, z: 0.22807102}
   m_Center: {x: 7.346057e-11, y: 0.045280803, z: 0.07745606}
+--- !u!114 &7537522847724379046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2203395605047492342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f52961e76961d146b848f7eaf0cf234, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frogSplashEvent:
+    Guid:
+      Data1: -704275287
+      Data2: 1217247422
+      Data3: 1179315358
+      Data4: 1558967851
+    Path: event:/Foley_Frog Splash
 --- !u!1 &2553738877363350862
 GameObject:
   m_ObjectHideFlags: 0

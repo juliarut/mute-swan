@@ -5807,11 +5807,87 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8529990802946256419, guid: 9334a234e39175e4e8666ffaba2b8c8a,
         type: 3}
+      propertyPath: m_UseDynamicAttach
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8529990802946256419, guid: 9334a234e39175e4e8666ffaba2b8c8a,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8529990802946256419, guid: 9334a234e39175e4e8666ffaba2b8c8a,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8529990802946256419, guid: 9334a234e39175e4e8666ffaba2b8c8a,
+        type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1184505795}
+    - target: {fileID: 8529990802946256419, guid: 9334a234e39175e4e8666ffaba2b8c8a,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2647930111175692008}
+    - target: {fileID: 8529990802946256419, guid: 9334a234e39175e4e8666ffaba2b8c8a,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8529990802946256419, guid: 9334a234e39175e4e8666ffaba2b8c8a,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 8529990802946256419, guid: 9334a234e39175e4e8666ffaba2b8c8a,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.Animator, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8529990802946256419, guid: 9334a234e39175e4e8666ffaba2b8c8a,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: JumpTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 8529990802946256419, guid: 9334a234e39175e4e8666ffaba2b8c8a,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9334a234e39175e4e8666ffaba2b8c8a, type: 3}
+--- !u!95 &2647930111175692008 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3131249924741836197, guid: 9334a234e39175e4e8666ffaba2b8c8a,
+    type: 3}
+  m_PrefabInstance: {fileID: 2647930111175692007}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2647930111175692009 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3131249924991611230, guid: 9334a234e39175e4e8666ffaba2b8c8a,
+    type: 3}
+  m_PrefabInstance: {fileID: 2647930111175692007}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2647930111175692010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2647930111175692009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f52961e76961d146b848f7eaf0cf234, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frogSplashEvent:
+    Guid:
+      Data1: -704275287
+      Data2: 1217247422
+      Data3: 1179315358
+      Data4: 1558967851
+    Path: event:/Foley_Frog Splash
 --- !u!1001 &4702660805045468493
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6019,11 +6095,57 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5998941507279582132, guid: 8f52ed1b075057840a847754213b8804,
         type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5998941507279582132, guid: 8f52ed1b075057840a847754213b8804,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5998941507279582132, guid: 8f52ed1b075057840a847754213b8804,
+        type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1184505795}
+    - target: {fileID: 5998941507279582132, guid: 8f52ed1b075057840a847754213b8804,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 6281248026615621483}
+    - target: {fileID: 5998941507279582132, guid: 8f52ed1b075057840a847754213b8804,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadNextScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 5998941507279582132, guid: 8f52ed1b075057840a847754213b8804,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 5998941507279582132, guid: 8f52ed1b075057840a847754213b8804,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5998941507279582132, guid: 8f52ed1b075057840a847754213b8804,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.Animator, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5998941507279582132, guid: 8f52ed1b075057840a847754213b8804,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: JumpTrigger
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f52ed1b075057840a847754213b8804, type: 3}
+--- !u!95 &6281248026615621483 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9140987290952494478, guid: 8f52ed1b075057840a847754213b8804,
+    type: 3}
+  m_PrefabInstance: {fileID: 6281248026615621482}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6619154071787420310
 PrefabInstance:
   m_ObjectHideFlags: 0
