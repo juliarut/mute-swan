@@ -1,28 +1,24 @@
 using FMODUnity;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering.Universal;
 
-[RequireComponent(typeof(Rigidbody))]
-public class FrogEvents : MonoBehaviour
+namespace AudioEvents
 {
-
-    [SerializeField]
-    private FMODUnity.EventReference frogSplashEvent;
-
-
-    // Start is called before the first frame update
-    void Start()
+    [RequireComponent(typeof(Rigidbody))]
+    public class FrogEvents : MonoBehaviour
     {
+        // Reference to FMOD unity event to trigger when frow collides with water
+        [SerializeField]
+        private FMODUnity.EventReference frogSplashEvent;
 
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Water"))
+        // Play one shot frog splash event when frog collides with object with Water tag
+        private void OnTriggerEnter(Collider other)
         {
-            RuntimeManager.PlayOneShot(frogSplashEvent);
+            if (other.CompareTag("Water"))
+            {
+                RuntimeManager.PlayOneShot(frogSplashEvent);
+            }
         }
     }
 }
+
+
