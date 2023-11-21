@@ -3798,7 +3798,7 @@ GameObject:
   - component: {fileID: 4873343300194734206}
   - component: {fileID: 486805195}
   m_Layer: 0
-  m_Name: Verse 1 Line
+  m_Name: V1L1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
