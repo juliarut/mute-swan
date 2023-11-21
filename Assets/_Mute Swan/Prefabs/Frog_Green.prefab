@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 4217958490867861157}
   - component: {fileID: 5998941507279582132}
   - component: {fileID: 7929599971995452895}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Frog_Green
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -166,8 +166,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.Playables.PlayableDirector, UnityEngine
-        m_MethodName: Play
+        m_TargetAssemblyTypeName: SceneHandler, Assembly-CSharp
+        m_MethodName: LoadNextScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
