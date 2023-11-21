@@ -1,11 +1,11 @@
 # mute-swan
 
 **Instructions**
-Timeline
-Plays song
-Lyric track activates and deactivates lyric objects in hierachy
-Animation tracks for boat, gate and fade to black
-Signal tracks to change scene and to start gate animator on time
+- Timeline
+- Plays song
+- Lyric track activates and deactivates lyric objects in hierachy
+- Animation tracks for boat, gate and fade to black
+- Signal tracks to change scene and to start gate animator on time
 
 Version history
 
