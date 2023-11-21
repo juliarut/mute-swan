@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="MixerGroup" id="{637b639f-90f2-4a41-b85e-fe96a7f893a1}">
+		<property name="name">
+			<value>Hard FX</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{9e392052-70c6-4b23-98dd-94839a64155d}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{89e0344b-e92b-48b0-829c-7f6f39620bd7}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{5e044f7c-425d-4b50-9813-8a925882a58f}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{9e392052-70c6-4b23-98dd-94839a64155d}">
+		<relationship name="effects">
+			<destination>{07f4faed-cc05-4644-b5f2-eb6f168d88b0}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{89e0344b-e92b-48b0-829c-7f6f39620bd7}" />
+	<object class="MixerBusFader" id="{07f4faed-cc05-4644-b5f2-eb6f168d88b0}" />
+</objects>
