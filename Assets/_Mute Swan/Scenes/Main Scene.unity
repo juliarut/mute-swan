@@ -7409,7 +7409,7 @@ PrefabInstance:
     - target: {fileID: 2203395605047492337, guid: 8f52ed1b075057840a847754213b8804,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.046
+      value: 0.064
       objectReference: {fileID: 0}
     - target: {fileID: 2203395605047492337, guid: 8f52ed1b075057840a847754213b8804,
         type: 3}
@@ -7419,12 +7419,12 @@ PrefabInstance:
     - target: {fileID: 2203395605047492337, guid: 8f52ed1b075057840a847754213b8804,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.35
+      value: 1.189
       objectReference: {fileID: 0}
     - target: {fileID: 2203395605047492337, guid: 8f52ed1b075057840a847754213b8804,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.43001172
+      value: -0.99996406
       objectReference: {fileID: 0}
     - target: {fileID: 2203395605047492337, guid: 8f52ed1b075057840a847754213b8804,
         type: 3}
@@ -7434,7 +7434,7 @@ PrefabInstance:
     - target: {fileID: 2203395605047492337, guid: 8f52ed1b075057840a847754213b8804,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.9028234
+      value: -0.008483015
       objectReference: {fileID: 0}
     - target: {fileID: 2203395605047492337, guid: 8f52ed1b075057840a847754213b8804,
         type: 3}
@@ -7449,7 +7449,7 @@ PrefabInstance:
     - target: {fileID: 2203395605047492337, guid: 8f52ed1b075057840a847754213b8804,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -230.937
+      value: -359.028
       objectReference: {fileID: 0}
     - target: {fileID: 2203395605047492337, guid: 8f52ed1b075057840a847754213b8804,
         type: 3}
@@ -7546,7 +7546,8 @@ PrefabInstance:
       propertyPath: m_ApplyRootMotion
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1242169260856318780, guid: 8f52ed1b075057840a847754213b8804, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8f52ed1b075057840a847754213b8804, type: 3}
 --- !u!1 &1949917381 stripped
 GameObject:
@@ -8361,6 +8362,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4198364409893528186, guid: b6b3ec0ee6552e14ab782a66763ef526,
+        type: 3}
+      propertyPath: m_TagString
+      value: Water
       objectReference: {fileID: 0}
     - target: {fileID: 8543084109678551907, guid: b6b3ec0ee6552e14ab782a66763ef526,
         type: 3}
