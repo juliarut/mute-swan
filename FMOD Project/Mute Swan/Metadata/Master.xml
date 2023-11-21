@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
 	<object class="MixerMaster" id="{0c8e3f58-bf35-4bea-bf1b-5367934e09eb}">
+		<property name="color">
+			<value>Red</value>
+		</property>
 		<property name="name">
 			<value>Master Bus</value>
 		</property>

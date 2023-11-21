@@ -17456,6 +17456,38 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &845098259 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6619154071271035795, guid: c40300843e706f94cbc9687ae0e43e69,
+    type: 3}
+  m_PrefabInstance: {fileID: 6619154071787420310}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &845098262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845098259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea44e659535359c42a4b4be418baef4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gateOpenEvent:
+    Guid:
+      Data1: -1967537189
+      Data2: 1235072829
+      Data3: -213915733
+      Data4: 478492290
+    Path: event:/SFX_Gate Open
+  gateCloseEvent:
+    Guid:
+      Data1: 1863878614
+      Data2: 1263544719
+      Data3: 575269052
+      Data4: -1495685954
+    Path: event:/SFX_Gate Close
 --- !u!1001 &846061032
 PrefabInstance:
   m_ObjectHideFlags: 0
