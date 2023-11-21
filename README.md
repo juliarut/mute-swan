@@ -7,6 +7,24 @@
 - Animation tracks for boat, gate and fade to black
 - Signal tracks to change scene and to start gate animator on time
 
+**Code Conventions**
+
+- Private member variables use camel casing (e.g. myVariable)
+- Always declare accessibility modifier (e.g. private, public, etc.)
+- Avoid in-line comments
+- Use XML tags for public methods
+- Remove unused methods
+- Place related scripts in their own namespace and corresponding folder
+- Remove unused using directives
+
+**Scene Hierarchy**
+Index 0 = "Start Scene"
+Index 1 = "Main Scene"
+
+**External Assets**
+- KTH Effect samples
+- Lean Touch
+
 Version history
 
 **v.0.1.0**
