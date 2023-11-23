@@ -29,7 +29,7 @@ public class TextEditor : MonoBehaviour
             RectTransform textRectTransform = newText.GetComponent<RectTransform>();
             textMeshPro.font = fontAsset;
             textMeshPro.text = lyricDictionary[description];
-            textMeshPro.color = Color.white;
+            textMeshPro.color = fontColor;
             textMeshPro.fontSize = fontSize;
             textMeshPro.alignment = TextAlignmentOptions.Center;
             textMeshPro.horizontalAlignment = HorizontalAlignmentOptions.Center;
